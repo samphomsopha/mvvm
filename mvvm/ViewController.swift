@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         tableView.delegate = tableViewController
         tableView.dataSource = tableViewController
+        tableViewController.viewModel = FeedTableViewController.ViewModel(contentItems: ContentItemModelController.fetchContentItems())
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,4 +27,3 @@ class ViewController: UIViewController {
     }
     
 }
-

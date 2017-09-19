@@ -33,21 +33,21 @@ extension ContentItemCardView {
         let subTitle: String
         let author: String
         let favorited: Bool
-    
-    
-        init(contentItem: ContentItem) {
-            title = contentItem.title
-            subTitle = contentItem.subTitle
-            author = contentItem.author
-            favorited = contentItem.favorited
-        }
-    
-        init() {
-            title = ""
-            subTitle = ""
-            author = ""
-            favorited = false
-        }
+    }
+}
+
+extension ContentItemCardView.ViewModel {
+    init(contentItem: ContentItem) {
+        title = contentItem.title
+        subTitle = contentItem.subTitle
+        author = contentItem.author
+        favorited = contentItem.favorited
     }
     
+    init() {
+        title = ""
+        subTitle = ""
+        author = ""
+        favorited = false
+    }
 }

@@ -10,6 +10,7 @@
 		A92000971F6B47E400A07141 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92000961F6B47E400A07141 /* FeedTableViewController.swift */; };
 		A92000991F6B4CF600A07141 /* ContentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92000981F6B4CF600A07141 /* ContentItem.swift */; };
 		A920009B1F6B4E3C00A07141 /* ContentItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A920009A1F6B4E3C00A07141 /* ContentItemCardView.swift */; };
+		A92000FB1F6C7D1E00A07141 /* ContentItemModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92000FA1F6C7D1E00A07141 /* ContentItemModelController.swift */; };
 		A9945E691F6AF78C00298C8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9945E681F6AF78C00298C8E /* AppDelegate.swift */; };
 		A9945E6B1F6AF78C00298C8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9945E6A1F6AF78C00298C8E /* ViewController.swift */; };
 		A9945E6E1F6AF78C00298C8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9945E6C1F6AF78C00298C8E /* Main.storyboard */; };
@@ -37,10 +38,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A99B30A31F70A1CA00D3E1B2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A92000961F6B47E400A07141 /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		A92000981F6B4CF600A07141 /* ContentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentItem.swift; sourceTree = "<group>"; };
 		A920009A1F6B4E3C00A07141 /* ContentItemCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentItemCardView.swift; sourceTree = "<group>"; };
+		A92000FA1F6C7D1E00A07141 /* ContentItemModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentItemModelController.swift; sourceTree = "<group>"; };
 		A9945E651F6AF78C00298C8E /* mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mvvm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9945E681F6AF78C00298C8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9945E6A1F6AF78C00298C8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +112,7 @@
 				A92000961F6B47E400A07141 /* FeedTableViewController.swift */,
 				A92000981F6B4CF600A07141 /* ContentItem.swift */,
 				A920009A1F6B4E3C00A07141 /* ContentItemCardView.swift */,
+				A92000FA1F6C7D1E00A07141 /* ContentItemModelController.swift */,
 			);
 			name = Feed;
 			sourceTree = "<group>";
@@ -163,6 +179,7 @@
 				A9945E611F6AF78C00298C8E /* Sources */,
 				A9945E621F6AF78C00298C8E /* Frameworks */,
 				A9945E631F6AF78C00298C8E /* Resources */,
+				A99B30A31F70A1CA00D3E1B2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -291,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9945E6B1F6AF78C00298C8E /* ViewController.swift in Sources */,
+				A92000FB1F6C7D1E00A07141 /* ContentItemModelController.swift in Sources */,
 				A9945E691F6AF78C00298C8E /* AppDelegate.swift in Sources */,
 				A92000991F6B4CF600A07141 /* ContentItem.swift in Sources */,
 				A9945E711F6AF78C00298C8E /* mvvm.xcdatamodeld in Sources */,
@@ -446,6 +464,7 @@
 		A9945E911F6AF78C00298C8E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D357AADY5D;
 				INFOPLIST_FILE = mvvm/Info.plist;
@@ -459,6 +478,7 @@
 		A9945E921F6AF78C00298C8E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D357AADY5D;
 				INFOPLIST_FILE = mvvm/Info.plist;
