@@ -19,6 +19,9 @@
 		A9945E761F6AF78C00298C8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9945E741F6AF78C00298C8E /* LaunchScreen.storyboard */; };
 		A9945E811F6AF78C00298C8E /* mvvmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9945E801F6AF78C00298C8E /* mvvmTests.swift */; };
 		A9945E8C1F6AF78C00298C8E /* mvvmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9945E8B1F6AF78C00298C8E /* mvvmUITests.swift */; };
+		A9AF2B5D1F71ED95000EA938 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9AF2B531F71ED36000EA938 /* Bond.framework */; };
+		A9AF2B5E1F71ED95000EA938 /* Diff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9AF2B561F71ED55000EA938 /* Diff.framework */; };
+		A9AF2B5F1F71ED95000EA938 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9AF2B571F71ED55000EA938 /* ReactiveKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,19 +40,6 @@
 			remoteInfo = mvvm;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A99B30A31F70A1CA00D3E1B2 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A92000961F6B47E400A07141 /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +60,9 @@
 		A9945E871F6AF78C00298C8E /* mvvmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mvvmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9945E8B1F6AF78C00298C8E /* mvvmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvvmUITests.swift; sourceTree = "<group>"; };
 		A9945E8D1F6AF78C00298C8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9AF2B531F71ED36000EA938 /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = Carthage/Build/iOS/Bond.framework; sourceTree = "<group>"; };
+		A9AF2B561F71ED55000EA938 /* Diff.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Diff.framework; path = Carthage/Build/iOS/Diff.framework; sourceTree = "<group>"; };
+		A9AF2B571F71ED55000EA938 /* ReactiveKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveKit.framework; path = Carthage/Build/iOS/ReactiveKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +70,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9AF2B5D1F71ED95000EA938 /* Bond.framework in Frameworks */,
+				A9AF2B5E1F71ED95000EA938 /* Diff.framework in Frameworks */,
+				A9AF2B5F1F71ED95000EA938 /* ReactiveKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,10 +116,14 @@
 		A9945E5C1F6AF78C00298C8E = {
 			isa = PBXGroup;
 			children = (
+				A9AF2B561F71ED55000EA938 /* Diff.framework */,
+				A9AF2B571F71ED55000EA938 /* ReactiveKit.framework */,
+				A9AF2B531F71ED36000EA938 /* Bond.framework */,
 				A9945E671F6AF78C00298C8E /* mvvm */,
 				A9945E7F1F6AF78C00298C8E /* mvvmTests */,
 				A9945E8A1F6AF78C00298C8E /* mvvmUITests */,
 				A9945E661F6AF78C00298C8E /* Products */,
+				A9AF2B5C1F71ED95000EA938 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +169,13 @@
 			path = mvvmUITests;
 			sourceTree = "<group>";
 		};
+		A9AF2B5C1F71ED95000EA938 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,7 +186,7 @@
 				A9945E611F6AF78C00298C8E /* Sources */,
 				A9945E621F6AF78C00298C8E /* Frameworks */,
 				A9945E631F6AF78C00298C8E /* Resources */,
-				A99B30A31F70A1CA00D3E1B2 /* Embed Frameworks */,
+				A9AF2B601F71EDA8000EA938 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -238,7 +245,7 @@
 				TargetAttributes = {
 					A9945E641F6AF78C00298C8E = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = D357AADY5D;
+						DevelopmentTeam = 2W77GC4XB8;
 						ProvisioningStyle = Automatic;
 					};
 					A9945E7B1F6AF78C00298C8E = {
@@ -301,6 +308,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A9AF2B601F71EDA8000EA938 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Diff.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Bond.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Diff.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Bond.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A9945E611F6AF78C00298C8E /* Sources */ = {
@@ -464,9 +494,12 @@
 		A9945E911F6AF78C00298C8E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = D357AADY5D;
+				DEVELOPMENT_TEAM = 2W77GC4XB8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = mvvm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.whalerock.mvvm;
@@ -478,9 +511,12 @@
 		A9945E921F6AF78C00298C8E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = D357AADY5D;
+				DEVELOPMENT_TEAM = 2W77GC4XB8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = mvvm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.whalerock.mvvm;

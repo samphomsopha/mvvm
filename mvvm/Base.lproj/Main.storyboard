@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A362a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -73,19 +73,20 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JPe-vd-dkC">
                                                     <rect key="frame" x="28" y="188" width="287" height="25"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="dxy-q9-4uv">
-                                                            <rect key="frame" x="5" y="0.0" width="25" height="25"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVK-IC-oeK" userLabel="Fav Button">
+                                                            <rect key="frame" x="10" y="0.0" width="25" height="25"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="25" id="RKA-Vc-1e8"/>
+                                                                <constraint firstAttribute="height" constant="25" id="12y-Rn-tL8"/>
+                                                                <constraint firstAttribute="width" constant="25" id="aFe-WC-WfX"/>
                                                             </constraints>
-                                                        </imageView>
+                                                            <state key="normal" image="Image"/>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.71132205310880825" green="0.71132205310880825" blue="0.71132205310880825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstItem="dxy-q9-4uv" firstAttribute="leading" secondItem="JPe-vd-dkC" secondAttribute="leading" constant="5" id="6D4-cJ-6eg"/>
-                                                        <constraint firstAttribute="bottom" secondItem="dxy-q9-4uv" secondAttribute="bottom" id="9w0-vg-fZA"/>
+                                                        <constraint firstItem="NVK-IC-oeK" firstAttribute="leading" secondItem="JPe-vd-dkC" secondAttribute="leading" constant="10" id="AfT-uS-5tF"/>
+                                                        <constraint firstItem="NVK-IC-oeK" firstAttribute="top" secondItem="JPe-vd-dkC" secondAttribute="top" id="Ncu-YW-F6Y"/>
                                                         <constraint firstAttribute="height" constant="25" id="R2a-Y3-KM4"/>
-                                                        <constraint firstItem="dxy-q9-4uv" firstAttribute="top" secondItem="JPe-vd-dkC" secondAttribute="top" id="eF4-yn-xQU"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -103,7 +104,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="authorLabel" destination="gUu-hC-3Yr" id="n6y-cW-QBo"/>
-                                            <outlet property="favImage" destination="dxy-q9-4uv" id="5hJ-K9-pbJ"/>
+                                            <outlet property="favoriteButton" destination="NVK-IC-oeK" id="TAu-aZ-LNw"/>
                                             <outlet property="subTitleLabel" destination="uh2-Mu-DOa" id="7c0-ZV-FYn"/>
                                             <outlet property="titleLabel" destination="PGl-D1-Det" id="bVe-ip-9Bh"/>
                                         </connections>

@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Bond
 
 class ContentItemCardView: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subTitleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
-    @IBOutlet weak var favImage: UIImageView!
+    @IBOutlet weak var favoriteButton: UIButton!
+    
     
     var viewModel: ViewModel = ViewModel() {
         didSet {
@@ -21,8 +23,18 @@ class ContentItemCardView: UITableViewCell {
             authorLabel.text = viewModel.author
             
             if viewModel.favorited {
-                favImage.backgroundColor = UIColor.red
+                favoriteButton.imageView?.backgroundColor = UIColor.red
             }
+        }
+    }
+    
+    override func awakeFromNib() {
+        setupBinding()
+    }
+    
+    func setupBinding() {
+        favoriteButton.reactive.tap.observeNext {[weak self] in
+            print("Tap Button For \(String(describing: self?.viewModel.title))")
         }
     }
 }
