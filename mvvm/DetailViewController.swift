@@ -37,7 +37,7 @@ extension DetailViewController {
         }
         
         init() {
-            contentItem = ContentItem(id: 0, title: "", author: "", subTitle: "", favorited: false)
+            contentItem = ContentItem(id: 0, title: "", author: "", subTitle: "")
         }
     }
 }

@@ -14,7 +14,7 @@ struct ContentItemViewModel {
     let title: String
     let subTitle: String
     let author: String
-    let favorited: Bool
+    var favorited: Bool
     
     init(contentItem: ContentItem) {
         self.contentItem = contentItem
@@ -22,11 +22,11 @@ struct ContentItemViewModel {
         title = contentItem.title
         subTitle = contentItem.subTitle
         author = contentItem.author
-        favorited = contentItem.favorited
+        favorited = FavoritesDataManager.shared.isFavorited(contentItem: contentItem)
     }
     
     init() {
-        contentItem = ContentItem(id: 0, title: "", author: "", subTitle: "", favorited: false)
+        contentItem = ContentItem(id: 0, title: "", author: "", subTitle: "")
         id = 0
         title = ""
         subTitle = ""

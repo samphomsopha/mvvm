@@ -30,6 +30,7 @@ class ContentItemCardView: UITableViewCell {
     func setupBinding() {
         favoriteButton.reactive.tap.observeNext {[weak self] in
             print("Tap Button For \(String(describing: self?.viewModel.value.title))")
+            FavoritesDataManager.shared.toggleFavorite(contentItem: (self?.viewModel.value.contentItem)!)
         }
         
         viewButton.reactive.tap.observeNext { [weak self] in
@@ -42,6 +43,10 @@ class ContentItemCardView: UITableViewCell {
             self.subTitleLabel.text = viewModel.subTitle
             self.authorLabel.text = viewModel.author
             self.favoriteButton.imageView?.backgroundColor = viewModel.favorited ? UIColor.red : UIColor.white
+        }
+        
+        FavoritesDataManager.shared.favorites.observeNext { contentItem in
+            self.viewModel.value.favorited = FavoritesDataManager.shared.isFavorited(contentItem: self.viewModel.value.contentItem)
         }
     }
 }

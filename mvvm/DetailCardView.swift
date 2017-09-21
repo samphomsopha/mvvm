@@ -26,6 +26,7 @@ class DetailCardView: UIView {
     func setupBinding() {
         favButton.reactive.tap.observeNext { [weak self] in
             print("Tap Favorite")
+            FavoritesDataManager.shared.toggleFavorite(contentItem: (self?.viewModel.value.contentItem)!)
         }
         
         closeButton.reactive.tap.observeNext {
@@ -37,6 +38,10 @@ class DetailCardView: UIView {
             self.subTitleLabel.text = viewModel.subTitle
             self.authorLabel.text = viewModel.author
             self.favButton.imageView?.backgroundColor = viewModel.favorited ? UIColor.red : UIColor.white
+        }
+        
+        FavoritesDataManager.shared.favorites.observeNext { contentItem in
+            self.viewModel.value.favorited = FavoritesDataManager.shared.isFavorited(contentItem: self.viewModel.value.contentItem)
         }
     }
 }

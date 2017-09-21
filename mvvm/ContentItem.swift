@@ -13,5 +13,4 @@ struct ContentItem {
     let title: String
     let author: String
     let subTitle: String
-    var favorited: Bool
 }
