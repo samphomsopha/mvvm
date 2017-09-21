@@ -11,6 +11,10 @@
 		A92000991F6B4CF600A07141 /* ContentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92000981F6B4CF600A07141 /* ContentItem.swift */; };
 		A920009B1F6B4E3C00A07141 /* ContentItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A920009A1F6B4E3C00A07141 /* ContentItemCardView.swift */; };
 		A92000FB1F6C7D1E00A07141 /* ContentItemModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92000FA1F6C7D1E00A07141 /* ContentItemModelController.swift */; };
+		A95D7D4C1F734EC3006037BB /* FavoritesDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D7D4B1F734EC3006037BB /* FavoritesDataManager.swift */; };
+		A9617DF81F7325DD00D00427 /* ContentItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9617DF71F7325DD00D00427 /* ContentItemViewModel.swift */; };
+		A9617DFB1F732F0C00D00427 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9617DFA1F732F0C00D00427 /* DetailViewController.swift */; };
+		A9617DFD1F7337BA00D00427 /* DetailCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9617DFC1F7337BA00D00427 /* DetailCardView.swift */; };
 		A9945E691F6AF78C00298C8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9945E681F6AF78C00298C8E /* AppDelegate.swift */; };
 		A9945E6B1F6AF78C00298C8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9945E6A1F6AF78C00298C8E /* ViewController.swift */; };
 		A9945E6E1F6AF78C00298C8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9945E6C1F6AF78C00298C8E /* Main.storyboard */; };
@@ -46,6 +50,10 @@
 		A92000981F6B4CF600A07141 /* ContentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentItem.swift; sourceTree = "<group>"; };
 		A920009A1F6B4E3C00A07141 /* ContentItemCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentItemCardView.swift; sourceTree = "<group>"; };
 		A92000FA1F6C7D1E00A07141 /* ContentItemModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentItemModelController.swift; sourceTree = "<group>"; };
+		A95D7D4B1F734EC3006037BB /* FavoritesDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesDataManager.swift; sourceTree = "<group>"; };
+		A9617DF71F7325DD00D00427 /* ContentItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentItemViewModel.swift; sourceTree = "<group>"; };
+		A9617DFA1F732F0C00D00427 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A9617DFC1F7337BA00D00427 /* DetailCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCardView.swift; sourceTree = "<group>"; };
 		A9945E651F6AF78C00298C8E /* mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mvvm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9945E681F6AF78C00298C8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9945E6A1F6AF78C00298C8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +104,8 @@
 		A92000941F6B47AE00A07141 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A95D7D4A1F734EAB006037BB /* Favorites */,
+				A9617DF91F732EED00D00427 /* Detail */,
 				A92000951F6B47B900A07141 /* Feed */,
 			);
 			name = Components;
@@ -109,8 +119,26 @@
 				A92000981F6B4CF600A07141 /* ContentItem.swift */,
 				A920009A1F6B4E3C00A07141 /* ContentItemCardView.swift */,
 				A92000FA1F6C7D1E00A07141 /* ContentItemModelController.swift */,
+				A9617DF71F7325DD00D00427 /* ContentItemViewModel.swift */,
 			);
 			name = Feed;
+			sourceTree = "<group>";
+		};
+		A95D7D4A1F734EAB006037BB /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				A95D7D4B1F734EC3006037BB /* FavoritesDataManager.swift */,
+			);
+			name = Favorites;
+			sourceTree = "<group>";
+		};
+		A9617DF91F732EED00D00427 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				A9617DFA1F732F0C00D00427 /* DetailViewController.swift */,
+				A9617DFC1F7337BA00D00427 /* DetailCardView.swift */,
+			);
+			name = Detail;
 			sourceTree = "<group>";
 		};
 		A9945E5C1F6AF78C00298C8E = {
@@ -245,7 +273,7 @@
 				TargetAttributes = {
 					A9945E641F6AF78C00298C8E = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 2W77GC4XB8;
+						DevelopmentTeam = D357AADY5D;
 						ProvisioningStyle = Automatic;
 					};
 					A9945E7B1F6AF78C00298C8E = {
@@ -337,13 +365,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9617DFB1F732F0C00D00427 /* DetailViewController.swift in Sources */,
 				A9945E6B1F6AF78C00298C8E /* ViewController.swift in Sources */,
 				A92000FB1F6C7D1E00A07141 /* ContentItemModelController.swift in Sources */,
+				A9617DFD1F7337BA00D00427 /* DetailCardView.swift in Sources */,
 				A9945E691F6AF78C00298C8E /* AppDelegate.swift in Sources */,
+				A9617DF81F7325DD00D00427 /* ContentItemViewModel.swift in Sources */,
 				A92000991F6B4CF600A07141 /* ContentItem.swift in Sources */,
 				A9945E711F6AF78C00298C8E /* mvvm.xcdatamodeld in Sources */,
 				A92000971F6B47E400A07141 /* FeedTableViewController.swift in Sources */,
 				A920009B1F6B4E3C00A07141 /* ContentItemCardView.swift in Sources */,
+				A95D7D4C1F734EC3006037BB /* FavoritesDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,7 +527,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2W77GC4XB8;
+				DEVELOPMENT_TEAM = D357AADY5D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -512,7 +544,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2W77GC4XB8;
+				DEVELOPMENT_TEAM = D357AADY5D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

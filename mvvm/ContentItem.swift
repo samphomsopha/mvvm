@@ -9,8 +9,9 @@
 import Foundation
 
 struct ContentItem {
+    let id: Int
     let title: String
     let author: String
     let subTitle: String
-    let favorited: Bool
+    var favorited: Bool
 }

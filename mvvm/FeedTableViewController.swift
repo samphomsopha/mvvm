@@ -9,7 +9,7 @@
 import UIKit
 
 class FeedTableViewController: UITableViewController {
-    
+    weak var delegate: UIViewController?
     var viewModel: ViewModel = ViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,9 +40,19 @@ class FeedTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cardCellView", for: indexPath) as! ContentItemCardView
-        let cellViewModel = ContentItemCardView.ViewModel(contentItem: viewModel.contentItems[indexPath.row])
-        cell.viewModel = cellViewModel
+        let cellViewModel = ContentItemViewModel(contentItem: viewModel.contentItems[indexPath.row])
+        cell.viewModel.value = cellViewModel
+        cell.delegate = self
         return cell
+    }
+}
+
+extension FeedTableViewController: ContentItemCardViewDelegate {
+    func didTapViewDetail(contentItem: ContentItem) {
+        //show detail view
+        let detailViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "detailViewController") as! DetailViewController
+        detailViewController.viewModel = DetailViewController.ViewModel(contentItem: contentItem)
+        delegate?.present(detailViewController, animated: true, completion: nil)
     }
 }
 
